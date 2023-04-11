@@ -1,0 +1,128 @@
+<!--
+    Curso/Serie: Ciência da Computação / 2°A
+    4° Exercício disciplina Programação WEB
+              Prof. Carlos Majer
+-->
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <title>Cadastro de Consultas Médicas</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+            body{
+                line-height: 25px;
+                width: 600px;
+                margin-left: 50px;
+            }
+
+            form{
+                background-color:#ffeff0;
+                
+                border-radius: 30px;
+                outline: solid #f3d1e4;
+            }
+
+            #titulo{
+                text-align: center;
+                font-family:cursive;
+                color:#69013c;
+                line-height: 1px;
+                padding: 1px;
+                padding-bottom: 11px;
+                height: 15px;
+            }
+
+            .elementos{
+                color:black;
+                font-family:monospace;
+                font-size: 14px;
+                margin: 18px;
+            }
+
+            textarea{
+                line-height: 20px;
+                padding: 5px;
+                height: 90px;
+                resize: none;
+            }
+
+            #alinhamento{
+                width: 50%;
+                margin: 0 auto;
+                padding-bottom: 7px;
+            }
+
+        </style>
+    </head>
+        <body>
+            <form   action="gravarDados.php"
+                    method="post"
+                    enctype="multipart/form-data">
+            <div id="titulo">
+            <h1>Cadastro de Consultas Médicas</h1>
+        </div>
+            <div class="elementos">
+                <hr>
+            • Nome:
+            <input type="text" name="nome" placeholder="do paciente" maxlength="30"><br>
+            
+
+            • Email:
+            <input type="email" name="email" style="width:275px;" placeholder="Insira o email do paciente" maxlength="50"><br>
+
+            • DDD:
+            <input type="tel" name="DDD" style="width:80px;" placeholder="Insira o DDD" maxlength="2">
+            &emsp;
+            • Telefone:
+            <input type="tel" name="telefone" style="width:100px;" placeholder="Insira o telefone" maxlength="12"><br>
+
+            • Data de Nascimento:
+            <input type="date" name="dataNasc" placeholder="Insira a data de nascimento"><br>
+            
+            • Sexo:
+            <input type="radio" name="sexo" value="F" checked> Feminino
+            <input type="radio" name="sexo" value="M"> Masculino
+            &emsp;
+            • Estado Civil:
+            <select name="estadoCivil">
+                <option value="">Selecione...</option>
+                <option value="Solteiro(a)">Solteiro(a)</option>
+                <option value="Casado(a)">Casado(a)</option>
+                <option value="Viúvo(a)">Viúvo(a)</option>
+                <option value="Divorciado(a)">Divorciado(a)</option>
+                <option value="Separado(a)">Separado(a)</option>
+            </select><br>
+
+            • Data do Agendamento:
+            <input type="date" name="dataAgen" placeholder="Data da Consulta">
+            
+            • Hora do Agendamento:
+            <input type="time" name="horaAgen"><br>
+
+            • Número da Carteirinha:
+            <input type="text" name="numero" style="width:120px;" placeholder="Insira o número"><br>
+
+            • Foto da carteirinha e do RG:
+            <input type="file" name="fotos[]" id="file" multiple><br>
+            
+
+            • Tem alguma doença crônica?:
+            <input type="checkbox" name="checkbox"  value="Sim"/>Sim
+            <input type="checkbox" name="checkbox1"  value="Nao"/>Não
+        
+            <br>
+            <br>
+
+            •<b> Descrição da situação médica atual:</b><br>
+            <textarea name="Descricao" rows="50" cols="73" maxlength="300" placeholder="Insira aqui os detalhes sobre a sua situação."></textarea>
+                <br>
+              <div id="alinhamento">
+                <input type="submit" name="submit" value="Cadastrar Dados">
+                &emsp;&emsp;
+                <input type="reset" name="reset" value="Resetar Campos"></div>
+            </div>
+                
+        </form>
+    </body>
+</html>   
