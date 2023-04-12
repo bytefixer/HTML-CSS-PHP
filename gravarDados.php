@@ -27,10 +27,6 @@
 		$tipoArquivo	= $_FILES["fotos"]["type"] ;
 		$nomeTmp 		= $_FILES["fotos"]["tmp_name"] ;
 
-
-        echo "» <b>Nome do aluno:</b> Monica Vieira Salvador <br>";
-        echo "» <b>RGM:</b> 1730364272";
-
         echo"<hr>";
 
 		echo "<h1>• Gravando os dados do formulário...</h1>";
